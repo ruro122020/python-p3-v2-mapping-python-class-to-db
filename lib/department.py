@@ -65,3 +65,14 @@ class Department:
 
         CURSOR.execute(sql, (self.name, self.location, self.id))
         CONN.commit()
+
+    def delete(self):       
+        """Delete the table row corresponding to the current Department instance"""
+
+        sql = """
+            DELETE FROM departments
+            WHERE id = ?
+        """
+
+        CURSOR.execute(sql, (self.id))
+        CONN.commit()
