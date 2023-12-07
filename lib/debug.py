@@ -9,16 +9,11 @@ import ipdb
 Department.drop_table()
 Department.create_table()
 
-payroll = Department("Payroll", "Building A, 5th Floor")
+payroll = Department.create("Payroll", "Building A, 5th Floor")
 print(payroll)
 
-payroll.save()
-print(payroll)
 
-hr = Department("Human Resources", "Building C, East Wing")
-print(hr)
-
-hr.save()
+hr = Department.create("Human Resources", "Building C, East Wing")
 print(hr)
 
 ipdb.set_trace()
